@@ -1,5 +1,3 @@
-var fs = require("fs");
-var buf = fs.readFile(process.argv[2]);
-var str = buf.toString();
-var strArray = str.split("\n");
-console.log(strArray.length - 1);
+const fs = require("fs");
+var file = fs.readFileSync(process.argv[2]);
+console.log(file.toString().split("\n").length - 1);
